@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Typing Speed</title>
+</head>
+<body>
+  
+   <div id="register" class="row ">
+     <h3>Select your category</h3>
+     <button id="btnStudent" class="btn btn-full" onclick="showStudentData()">STUDENT</button>
+     <button id="btnTeacher" class="btn btn-full" onclick="showTeacherData()">TEACHER</button>
+   </div>
+  
+    <div id="stuReg" style="display: none;"  class="row">
+      <h3>Register Yourself First!</h3>
+            <label>Enter RollNo: </label>
+            <input type="text" required placeholder="Enter Roll No" id="rollNo"/>
+            <br>
+            <button type="button" class="btn btn-full" id="btnSubmit" onclick="hideDiv()"> SUBMIT </button>
+    </div>
+    
+    <!-- Creating a textarea-->
+    <div id="msg" style="display: none;">
+      <textarea  id="input_text" placeholder="Enter your message here....." oninput="countWords()" cols="30" rows="10" required></textarea>
+      
+    </div>
+    <div id="auth" style="display: none;" class="row"> 
+      <label>Enter Username:</label>
+      <input type="text" id="username">
+      <br>
+      <label>Enter Password: </label>
+      <input type="text" id="password">
+      <br>
+      <button onclick="btnSubmit()" class="btn btn-full">SUBMIT</button>
+    </div>
+    <div id="showData" style="display: none;">
+    <!-- Creating a Table To show Data-->
+    <table id="stuTable">
+      <caption>Student's Typing Speed</caption>
+      <tr>
+        <th>Roll No</th>
+        <th>Total Words</th>
+        <th>Total Characters</th>
+        <th>Words/min</th>
+      </tr>  
+    </table>
+    </div>
+    
+
+  
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="config.js"></script>
+    </body>
+   
+<script src="client.js"></script>
+</html>
+
+
+ 
+  
+
